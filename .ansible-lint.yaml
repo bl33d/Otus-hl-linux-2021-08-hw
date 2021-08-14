@@ -1,0 +1,59 @@
+# .ansible-lint
+exclude_paths:
+- .cache/
+- .git/
+#parseable: true
+#quiet: true
+verbosity: 1
+
+# Enable checking of loop variable prefixes in roles
+#loop_var_prefix: "{role}_"
+
+# Enforce variable names to follow pattern below, in addition to Ansible own
+# requirements, like avoiding python identifiers. To disable add `var-naming`
+# to skip_list.
+# var_naming_pattern: "^[a-z_][a-z0-9_]*$"
+
+# This makes linter to fully ignore rules/tags listed below
+# skip_list:
+#   - '201'  # Trailing whitespace
+#   - '206'  # Variables should have spaces before and after: {{ var_name }}
+
+# This makes the linter display but not fail for rules/tags listed below:
+warn_list:
+  - '101' # Deprecated always_run
+  - '102' # No Jinja2 in when
+  - '103' # Deprecated sudo
+  - '104' # Using bare variables is deprecated
+  - '105' # Deprecated module
+  - '106' # Role name {} does not match ^[a-z][a-z0-9_]+$ pattern
+  - '201' # Trailing whitespace
+  - '202' # Octal file permissions must contain leading zero or be a string
+  - '203' # Most files should not contain tabs
+  - '204' # Lines should be no longer than 160 chars
+  - '205' # Use ".yml" or ".yaml" playbook extension
+  - '206' # Variables should have spaces before and after: {{ var_name }}
+  - '207' # Nested jinja pattern
+  - '208' # File permissions unset or incorrect
+  - '301' # Commands should not change things if nothing needs doing
+  - '302' # Using command rather than an argument to e.g. file
+  - '303' # Using command rather than module
+  - '304' # Environment variables don't work as part of command
+  - '305' # Use shell only when shell functionality is required
+  - '306' # Shells that use pipes should set the pipefail option
+  - '401' # Git checkouts must contain explicit version
+  - '402' # Mercurial checkouts must contain explicit revision
+  - '403' # Package installs should not use latest
+  - '404' # Doesn't need a relative path in role
+  - '501' # become_user requires become to work as expected
+  - '502' # All tasks should be named
+  - '503' # Tasks that run when changed should likely be handlers
+  - '504' # Do not use 'local_action', use 'delegate_to: localhost'
+  - '505' # referenced files must exist
+  - '601' # Don't compare to literal True/False
+  - '602' # Don't compare to empty string
+  - '701' # meta/main.yml should contain relevant info
+  - '702' # Tags must contain lowercase letters and digits only
+  - '703' # meta/main.yml default values should be changed
+  - '704' # meta/main.yml video_links should be formatted correctly
+  - '901' # Failed to load or parse file

@@ -29,11 +29,11 @@ repos:
         name: Yaml validate with yamllint
         args: [-c=.yamllint-config.yaml]
 
-  - repo: https://github.com/willthames/ansible-lint.git
-    rev: v4.3.6
-    hooks:
-      - id: ansible-lint
-        files: \.(yaml|yml)$
+#   - repo: https://github.com/willthames/ansible-lint.git
+#     rev: v4.3.6
+#     hooks:
+#       - id: ansible-lint
+#         files: \.(yaml|yml)$
 
   - repo: https://github.com/antonbabenko/pre-commit-terraform
     rev: v1.50.0

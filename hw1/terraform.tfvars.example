@@ -1,0 +1,5 @@
+cloud_id        = ""
+folder_id       = ""
+zone            = "ru-central1-a"
+public_key_path = "~/.ssh/id_rsa.pub"
+image_id        = "fd8vmcue7aajpmeo39kk" # Ubuntu 20.04, DONT CHANGE IT
